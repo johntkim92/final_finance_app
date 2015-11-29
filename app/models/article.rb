@@ -4,9 +4,12 @@ class Article < ActiveRecord::Base
   validates :body, presence: true
   validates :cash, presence: true
   validates :start_date, presence: true
+  validates :user, presence: true
+
+  belongs_to :user
 
   has_many :comments, dependent: :destroy
-  has_many :taggings
+  has_many :taggings, dependent: :destroy
   has_many :tags, through: :taggings
 
   def tag_list

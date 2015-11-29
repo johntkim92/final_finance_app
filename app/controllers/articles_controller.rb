@@ -1,9 +1,10 @@
 class ArticlesController < ApplicationController
+  before_action :require_current_user
 
   include ArticlesHelper
 
   def index
-    @articles = Article.all
+    @articles = current_user.articles.includes(:comments)
   end
 
   def show
@@ -19,7 +20,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(article_params)
+    @article = current_user.articles.new(article_params)
     @article.save
 
     flash.notice = "Article '#{@article.title}' Created!"

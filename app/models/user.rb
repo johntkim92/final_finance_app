@@ -7,4 +7,7 @@ class User < ActiveRecord::Base
   validates :password, length: {
     minimum: 8, allow_nil: true
   }
+
+  has_many :articles, dependent: :destroy
+  has_many :comments, through: :articles
 end
