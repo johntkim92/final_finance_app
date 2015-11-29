@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  root to: 'articles#index'
+  root to: 'application#welcome'
+
+  post '/users' => 'users#create'
 
   resources :articles do
     resources :comments
