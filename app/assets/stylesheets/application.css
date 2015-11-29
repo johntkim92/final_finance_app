@@ -19,6 +19,11 @@
   font-family: 'Overlock', cursive;
 }
 
+.log-out input[type=submit] {
+  border-radius: 5px;
+  background-color: black;
+}
+
 h3.center {
   text-align: center;
 }
