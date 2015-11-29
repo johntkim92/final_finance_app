@@ -14,6 +14,92 @@
  *= require_self
  */
 
+/* used everywhere */
+* {
+  font-family: 'Overlock', cursive;
+}
+
+h3.center {
+  text-align: center;
+}
+
+form.center {
+  margin: 0 auto;
+}
+
+.grad {
+  background: -webkit-linear-gradient(left top, red , blue);
+    background: -o-linear-gradient(bottom right, red, blue);
+    background: -moz-linear-gradient(bottom right, red, blue);
+    background: linear-gradient(to bottom right, #4d66b3 , #5a6da6);
+}
+
+/*.inputs {
+  margin-left: 50px;
+  margin-bottom: 1em;
+}*/
+
+/* sign up form class */
+.signup-form {
+  width: 450px;
+  font-size: 16px;
+  padding: 30px 30px 15px 30px;
+  border: 5px solid #53687E;
+}
+
+.signup-form input[type=submit],
+.signup-form input[type=email],
+.signup-form input[type=password],
+.signup-form input[type=button],
+.signup-form label {
+  font-size: 16px;
+  color: #fff;
+}
+
+.signup-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: pink;
+}
+
+.signup-form label > span {
+  display: inline-block;
+  float: left;
+  width: 150px;
+}
+
+.signup-form input[type=email],
+.signup-form input[type=password] {
+  background: transparent;
+  border: none;
+  border-bottom: 1px dashed #83A4C5;
+  width: 275px;
+  outline: none;
+  padding: 0px 0px 0px 0px;
+  font-style: italic;
+}
+
+.signup-form input[type=email]:focus,
+.signup-form input[type=password]:focus {
+  border-bottom: 1px dashed pink;
+}
+
+.signup-form input[type=submit],
+.signup-form input[type=button] {
+  background: #6495ED;
+  border: none;
+  padding: 8px 10px 8px 10px;
+  border-radius: 5px;
+  color: #F0F8FF;
+}
+
+.signup-form input[type=submit]:hover,
+.signup-form input[type=button]:hover {
+  background: #394D61;
+}
+
+/* flash notices */
 p.flash {
   background: yellow;
   border: 1px solid black;

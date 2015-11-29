@@ -1,19 +1,33 @@
 <h1>Welcome!</h1>
+<div class="center">
+<h3 class="center">Please Sign Up</h3>
 
-<h3>Please Sign Up</h3>
-
-<form action="<%= users_path %>" method="POST">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input type="email" name="user[email]" placeholder="Email Address"><br/>
-  <input type="password" name="user[password]" placeholder="Desired Password"><br/>
-  <input type="submit" value="Sign up">
+<form class="signup-form center grad" action="<%= users_path %>" method="POST">
+  <input class="inputs" type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="user[email]">
+    <span>Email Address</span><input class="inputs" type="email" name="user[email]" placeholder="Ex. johnsmith@email.com"><br/>
+  </label>
+  <label for="user[password]">
+    <span>Desired Password</span><input class="inputs" type="password" name="user[password]" placeholder="e*12jfds$%"><br/>
+  </label>
+  <label>
+    <span>&nbsp;</span><input class="inputs" type="submit" value="Sign up">
+  </label>
 </form>
 
-<h3>Please Sign In</h3>
+<h3 class="center">Please Sign In</h3>
 
-<form action="<%= session_path %>" method="POST">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input type="email" name="user[email]" placeholder="Email Address"><br/>
-  <input type="password" name="user[password]" placeholder="Password"><br/>
-  <input type="submit" value="Sign in">
+<form class="signup-form center grad" action="<%= session_path %>" method="POST">
+  <input class="inputs" type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="user[email]">
+    <span>Email Address</span><input class="inputs" type="email" name="user[email]">
+  </label>
+  <label for="user[password]">
+    <span>Password</span><input class="inputs" type="password" name="user[password]">
+  </label>
+  <label>
+    <span>&nbsp;</span><input class="inputs" type="submit" value="Sign in">
+  </label>
 </form>
+
+</div>
