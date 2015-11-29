@@ -2,7 +2,13 @@ Rails.application.routes.draw do
 
   root to: 'application#welcome'
 
+  get '/amiloggedin' => 'application#amiloggedin'
+
   post '/users' => 'users#create'
+
+  # get '/session' => 'session#curent_user'
+  post '/session' => 'session#create'
+  delete '/session' => 'session#destroy'
 
   resources :articles do
     resources :comments
