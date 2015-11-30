@@ -1,14 +1,20 @@
-<h1>All Entries</h1>
-<div id="articles">
+<h1 class="center">All Entries</h1>
+
+<table id="table-width" class="table table-striped table-bordered table-hover">
+  <tr>
+    <th class="table-header">Title</th>
+    <th class="table-header">Description</th>
+    <th class="table-header">Earned or Spent</th>
+    <th class="table-header">Date</th>
+  </tr>
   <% @articles.each do |article| %>
-    <div class="entry-list">
-      <span>
-        <h3 class="entry-link"><%= link_to article.title, article_path(article), class: "entry-link" %></h3>
-        <span><%= article.start_date %></span>
-        <p>Earned or Spent: $<%= article.cash %></p>
-      </span>
-    </div>
+    <tr class="entry-link">
+      <td><em><b><%= link_to article.title, article_path(article), class: "entry-link" %></b></em></td>
+      <td><%= article.body %></td>
+      <td>$<%= article.cash %></td>
+      <td><%= article.start_date %></td>
+    </tr>
   <% end %>
-</div>
+</table>
 
 <%= link_to "Create a New Entry", new_article_path, class: "new_article" %>

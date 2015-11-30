@@ -172,14 +172,30 @@ div.center > h1 {
 }
 
 /* index page */
-#articles .entry-link a {
-  color: #414A4C;
+.entry-link a {
+  color: #674C47;
 }
 
-div.entry-list {
-  width: 500px;
+th.table-header {
+  font-size: 18px;
+  color: #0F0F0F;
+}
+
+table#table-width {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/*div.entry-list {
+  width: 600px;
   background: white;
   margin: 0 auto;
+  box-shadow: 0 0 5px 2px rgba(0,0,0,.20)
+}*/
+
+h1.center {
+  text-align: center;
 }
 
 /* flash notices */
