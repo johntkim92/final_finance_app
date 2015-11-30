@@ -1,6 +1,11 @@
 <div id="article-form">
-  <h1 class="center">Create a New Entry</h1>
-
+  <div class="h1-div">
+    <h1 class="center">Create a New Entry</h1>
+  </div>
+  <div class="div-div">
+    <div id="red1"></div>
+    <div id="red2"></div>
+  </div>
   <%= form_for(@article) do |f| %>
     <ul>
     <% @article.errors.full_messages.each do |error| %>
@@ -8,27 +13,33 @@
     <% end %>
     </ul>
     <p>
-      <%= f.label :title, "Title" %><br />
+      <%= f.label :title, "Title:" %><br />
       <%= f.text_field :title %>
+      <div class="bottom-border"></div>
     </p>
     <p>
-      <%= f.label :body, "Description" %><br />
+      <%= f.label :body, "Description:" %><br />
       <%= f.text_area :body %>
+      <div class="bottom-border"></div>
     </p>
     <p>
       <%= f.label :cash, "$$ Amount $$" %><br />
       <%= f.number_field :cash %>
+      <div class="bottom-border"></div>
     </p>
     <p>
       <%= f.label :start_date, "Date Occurred" %><br />
       <%= f.date_field :start_date %>
+      <div class="bottom-border"></div>
     </p>
     <p>
       <%= f.label :tag_list %><br />
       <%= f.text_field :tag_list %>
+      <div class="bottom-border"></div>
     </p>
     <p>
       <%= f.submit %>
+      <div class="bottom-border"></div>
     </p>
   <% end %>
 </div>
