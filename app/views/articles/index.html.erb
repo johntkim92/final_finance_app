@@ -4,17 +4,18 @@
   <tr>
     <th class="table-header">Title</th>
     <th class="table-header">Description</th>
-    <th class="table-header">Earned or Spent</th>
     <th class="table-header">Date</th>
+    <th class="table-header">Earned or Spent</th>
   </tr>
   <% @articles.each do |article| %>
     <tr class="entry-link">
       <td><em><b><%= link_to article.title, article_path(article), class: "entry-link" %></b></em></td>
       <td><%= article.body %></td>
-      <td>$<%= article.cash %></td>
       <td><%= article.start_date %></td>
+      <td class="cash-align">$<%= article.cash %></td>
     </tr>
   <% end %>
 </table>
-
-<%= link_to "Create a New Entry", new_article_path, class: "new_article" %>
+<span id="link-right">
+<%= link_to "Create a New Entry", new_article_path, id: "new_article" %>
+<span>

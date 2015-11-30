@@ -179,14 +179,23 @@ div.center > h1 {
 th.table-header {
   font-size: 18px;
   color: #0F0F0F;
+  text-align: center;
+}
+
+td.cash-align {
+  text-align: right;
 }
 
 table#table-width {
   width: 90%;
   margin-left: 5%;
   margin-right: 5%;
+  margin-top: 20px;
 }
 
+span#link-right {
+  margin-left: 5%;
+}
 /*div.entry-list {
   width: 600px;
   background: white;
@@ -199,11 +208,12 @@ h1.center {
 }
 
 /* flash notices */
-p.flash {
+span.flash {
   background: #2F4F4F;
   border: 3px solid black;
   border-radius: 5px;
   padding: 1rem;
   font-size: 1em;
   color: #F8F8FF;
+  margin-bottom: 10px;
 }
