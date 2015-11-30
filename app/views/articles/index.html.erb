@@ -1,14 +1,14 @@
 <h1>All Entries</h1>
-<ul id="articles">
+<div id="articles">
   <% @articles.each do |article| %>
     <div class="entry-list">
-      <li>
+      <span>
         <h3 class="entry-link"><%= link_to article.title, article_path(article), class: "entry-link" %></h3>
         <span><%= article.start_date %></span>
-        <p>Spent: $<%= article.cash %></p>
-      </li>
+        <p>Earned or Spent: $<%= article.cash %></p>
+      </span>
     </div>
   <% end %>
-</ul>
+</div>
 
 <%= link_to "Create a New Entry", new_article_path, class: "new_article" %>

@@ -176,10 +176,11 @@ div.center > h1 {
   color: #414A4C;
 }
 
-#articles li {
-  list-style: none;
+div.entry-list {
+  width: 500px;
+  background: white;
+  margin: 0 auto;
 }
-
 
 /* flash notices */
 p.flash {
