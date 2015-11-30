@@ -205,7 +205,30 @@ span#link-right {
 
 h1.center {
   text-align: center;
+  color: #50404D;
 }
+
+/* for new article form */
+form#new_article {
+  display: inline-block;
+  /*text-align: center;*/
+  position: relative;
+}
+
+div#article-form {
+  /*text-align: center;*/
+  background-color: #FAF0BE;
+  width: 70%;
+  margin: 0 auto;
+}
+
+#article-form h1.center {
+  position: relative;
+  padding-top: 10px;
+  background-color: #826644;
+}
+
+
 
 /* flash notices */
 span.flash {
