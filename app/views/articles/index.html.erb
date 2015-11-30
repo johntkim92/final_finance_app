@@ -1,9 +1,13 @@
 <h1>All Entries</h1>
 <ul id="articles">
   <% @articles.each do |article| %>
-    <li>
-      <%= link_to article.title, article_path(article) %>
-    </li>
+    <div class="entry-list">
+      <li>
+        <h3 class="entry-link"><%= link_to article.title, article_path(article), class: "entry-link" %></h3>
+        <span><%= article.start_date %></span>
+        <p>Spent: $<%= article.cash %></p>
+      </li>
+    </div>
   <% end %>
 </ul>
 

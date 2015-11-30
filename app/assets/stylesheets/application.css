@@ -33,12 +33,12 @@ p {
   color: #FFFAF0 !important;
 }
 
-
 .log-out input[type=submit] {
   border-radius: 5px;
   background-color: black;
 }
 
+/* sign in page */
 h3.center {
   text-align: center;
 }
@@ -170,6 +170,16 @@ div.center > h1 {
 .signup-form input[type=button]:hover {
   background: #394D61;
 }
+
+/* index page */
+#articles .entry-link a {
+  color: #414A4C;
+}
+
+#articles li {
+  list-style: none;
+}
+
 
 /* flash notices */
 p.flash {
