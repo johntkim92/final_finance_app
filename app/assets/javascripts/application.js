@@ -14,3 +14,24 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+jQuery(document).ready(function($) {
+
+  // modals
+  var modal = $(".my-modal");
+  var button = $("#my-button");
+  var xMark = $("#X");
+
+  // click button makes modal appear and reappear
+  button.click(function() {
+    modal.toggleClass("appear");
+    modal.toggleClass("my-modal")
+  });
+
+  // click X button gets rid of modal
+  xMark.click(function() {
+    modal.toggleClass("appear");
+    modal.toggleClass("my-modal")
+
+  });
+
+});

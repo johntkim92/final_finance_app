@@ -1,33 +1,41 @@
 <h1>Welcome!</h1>
+
 <div class="center">
-<h3 class="center">Please Sign Up</h3>
+  <button id='my-button'>Click Here to Register</button>
 
-<form class="signup-form center grad" action="<%= users_path %>" method="POST">
-  <input class="inputs" type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <label for="user[email]">
-    <span>Email Address</span><input class="inputs" type="email" name="user[email]" placeholder="Ex. johnsmith@email.com"><br/>
-  </label>
-  <label for="user[password]">
-    <span>Desired Password</span><input class="inputs" type="password" name="user[password]" placeholder="e*12jfds$%"><br/>
-  </label>
-  <label>
-    <span>&nbsp;</span><input class="inputs" type="submit" value="Sign up">
-  </label>
-</form>
+  <div class="my-modal">
 
-<h3 class="center">Please Sign In</h3>
+    <h3 class="center">Please Sign Up</h3>
 
-<form class="signup-form center grad" action="<%= session_path %>" method="POST">
-  <input class="inputs" type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <label for="user[email]">
-    <span>Email Address</span><input class="inputs" type="email" name="user[email]">
-  </label>
-  <label for="user[password]">
-    <span>Password</span><input class="inputs" type="password" name="user[password]">
-  </label>
-  <label>
-    <span>&nbsp;</span><input class="inputs" type="submit" value="Sign in">
-  </label>
-</form>
+    <button id='X'>X</button>
+
+    <form class="signup-form center grad" action="<%= users_path %>" method="POST">
+      <input class="inputs" type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+      <label for="user[email]">
+        <span>Email Address</span><input class="inputs" type="email" name="user[email]" placeholder="Ex. johnsmith@email.com"><br/>
+      </label>
+      <label for="user[password]">
+        <span>Desired Password</span><input class="inputs" type="password" name="user[password]" placeholder="e*12jfds$%"><br/>
+      </label>
+      <label>
+        <span>&nbsp;</span><input class="inputs" type="submit" value="Sign up">
+      </label>
+    </form>
+  </div>
+
+  <h3 class="center">Please Sign In</h3>
+
+  <form class="signup-form center grad" action="<%= session_path %>" method="POST">
+    <input class="inputs" type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <label for="user[email]">
+      <span>Email Address</span><input class="inputs" type="email" name="user[email]">
+    </label>
+    <label for="user[password]">
+      <span>Password</span><input class="inputs" type="password" name="user[password]">
+    </label>
+    <label>
+      <span>&nbsp;</span><input class="inputs" type="submit" value="Sign in">
+    </label>
+  </form>
 
 </div>
