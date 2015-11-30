@@ -1,14 +1,12 @@
-<h1>Welcome!</h1>
-
 <div class="center">
-  <button id='my-button'>Click Here to Register</button>
+  <h1>Welcome to CashBook!</h1>
+  <p><em>Write entries to keep track of your finances.</em></p>
+</div>
 
+<div>
   <div class="my-modal">
-
     <h3 class="center">Please Sign Up</h3>
-
     <button id='X'>X</button>
-
     <form class="signup-form center grad" action="<%= users_path %>" method="POST">
       <input class="inputs" type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
       <label for="user[email]">
@@ -37,5 +35,6 @@
       <span>&nbsp;</span><input class="inputs" type="submit" value="Sign in">
     </label>
   </form>
+  <button class="center" id='my-button'>Click Here to Register</button>
 
 </div>
