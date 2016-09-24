@@ -5,9 +5,8 @@
       <%= link_to tag.name, tag_path(tag) %>
     <% end %>
   </h5>
-  <p><%= @article.body %></p>
-  <p>$<%= @article.cash %></p>
-  <p><%= @article.start_date %></p>
+  <h3><%= @article.body %></h3>
+  <h4><i>$<%= @article.cash %>, on <%= @article.start_date %></i></h4>
 
   <h3>Notes (<%= @article.comments.size %>)</h3>
 

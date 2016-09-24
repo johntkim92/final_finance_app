@@ -15,6 +15,17 @@
       <td class="cash-align">$<%= article.cash %></td>
     </tr>
   <% end %>
+  <tr class="entry-link">
+    <td></td>
+    <td></td>
+    <td></td>
+    <td class="cash-align">
+      <% if @articles.sum(:cash) >= 0 %>
+        <b>Total : $<%= @articles.sum(:cash) %></b></td>
+      <% else %>
+        <b>Total : ($<%= -@articles.sum(:cash) %>)</b></td>
+      <% end %>
+  </tr>
 </table>
 <span id="link-right">
 <%= link_to "Create a New Entry", new_article_path, id: "new_article" %>
